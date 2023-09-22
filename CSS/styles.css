@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../Fonts/Oswald-.ttf');
+}
+@font-face {
+    font-family: 'EduSA';
+    src: url('../Fonts/EduSABeginner.ttf');
+}
+:root{
+    --primarycolor:rgb(151, 29, 118);
+    --mainDark:black;
+    --letterspacing:0.5rem;
+    --secondarycolor:blue;
+    --mainTransition:all 0.3s ease-in-out;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: Oswald;
+}
+.main-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    font-size: 1.2rem;
+    background-color: var(--primarycolor);
+    color:black;
+    padding: 0.5rem 2rem;
+    outline: 2px solid var(--primarycolor);
+    outline-offset: 2px;
+}
+.menu{
+    color: var(--primarycolor);
+    font-size: 3rem;
+    position: fixed;
+    left: 1rem;
+    animation: bounce 2s infinite;
+}
+.navbar{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 4rem;
+    transform: translateX(-150%);
+    transition: var(--mainTransition);
+}
+.oneshaNavbar{
+    transform: translateX(0);
+}
+.nav-link{
+font-weight: bold;
+color: var(--primarycolor);
+text-transform: uppercase;
+font-size: 2rem;
+margin-top: 0.5rem;
+list-style-type:none;
+}
+.nav-close{
+    font-size: 2.5rem;
+  
+}
+
+.header{
+   background: url(../Images/pc\ background.jpg); 
+   height: 100vh;   
+   background-position: center;
+   background-size: cover; 
+   background-attachment: fixed;
+   display: flex;
+   flex-direction: column;  
+   justify-content: center;
+   align-items: center;
+   margin-top: 2px;
+}
+.header-subtitle{
+    letter-spacing: var(--letterspacing);
+    font-family: 'EduSA';
+    color: var(--primarycolor);
+    font-size: 2.5rem;
+    text-align: center;
+    animation: slidefromkushoto 2s 1;
+}
+.header-title{
+    letter-spacing: var(--letterspacing);
+    font-size: 3.5rem;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+    animation: slidefromkulia 2s 1;
+}
+.header-title-thin{
+    letter-spacing: var(--letterspacing);
+    font-size: 3.5rem;
+    font-weight: 100;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+    animation: slidefromkushoto 2s 1;
+
+}
+.btn{
+    margin-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    font-size: 1.5rem;
+    background-color: var(--primarycolor);
+    color:black;
+    padding: 0.5rem 3rem;
+    outline: 2px solid var(--primarycolor);
+    outline-offset: 2px;
+    animation: bounce 2s 1;
+}
+@keyframes slidefromkushoto {
+    0%{
+        transform: translateX(-1000px);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slidefromkulia {
+    0%{
+        transform: translateX(1000px);
+    }
+    50%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes bounce{
+    0%{
+     transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+.divider{
+    height: 0.5rem;
+    background:linear-gradient(to right ,var(--primarycolor),var(--secondarycolor),var(--primarycolor));
+}
+.huduma-section{
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+}
+.huduma{
+    padding: 1rem;
+    width: 50%;
+    flex-shrink: 0;
+    text-align: center;
+    transition: var(--mainTransition);
+}
+@media screen and (min-width:576px) {
+    .huduma{
+        width: 25%;
+    }
+}
+.huduma:hover{
+    cursor: pointer;
+    background-color: var(--primarycolor);
+}
+.huduma-icon{
+    font-size: 2rem;
+    display: inline-block;
+    transition: var(--mainTransition);
+
+}
+.huduma:hover .huduma-icon{
+    transform: translateY(-5px);
+}
+.huduma:hover .huduma-title{
+    color: white;
+}
+.huduma-title{
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+    color: var(--primarycolor);
+    font-weight: bold;
+    transition: var(--mainTransition);
+}
+.huduma-text{
+    margin: 0 auto;
+    max-width: 200px;
+}
+.kuhusu-section{
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container{
+    border: 3px solid var(--primarycolor);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.kuhusu-image{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    transition: var(--mainTransition);
+}
+.image-container:hover .kuhusu-image{
+    transform: scale(1.4);
+}
+.kuhusu-sutitle{
+    font-family: "EduSA";
+    letter-spacing: var(--letterspacing);
+    font-size: 2.5rem;
+    color: var(--primarycolor);
+}
+.kuhusu-title{
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+}
+.kuhusu-text{
+    text-align: center;
+}
+.kuhusu-kushoto, .kuhusu-kulia{
+flex-shrink: 0;
+    width: 100%;
+}
+@media screen and (min-width:576) {
+    .kuhusu-kushoto, kuhusu-kulia{
+        width: 50%;
+    }
+    .kuhusu-kulia{
+        padding:1rem ;
+    }
+    .main-btn{
+        padding:.5rem  1rem;
+    }
+}
+.center-section{
+    margin: 0 4rem;
+    padding: 2rem 0;
+}
+.section-dark{
+    background-color: var(--mainDark);
+    color: white;
+}
+.bidhaa-kushoto{
+    flex-shrink: 0;
+    width: 100%;
+}
+.bidhaa-kulia{
+    flex-shrink: o;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bidhaa{
+    flex-shrink: 0;
+    width: 100%;
+}
+@media screen and(min-width:700px) {
+    .bidhaa{
+        width: 50%;
+        padding-right: .5rem;
+    } 
+}
+@media screen and(min-width:900px) {
+    .bidhaa{
+        width: 33.3%;
+    } 
+}
+@media screen and(min-width:1200px) {
+    .bidhaa-kushoto{
+        width: 30%;
+    } 
+    .bidhaa-kulia{
+        width: 70%;
+    } 
+}
+.bidhaa-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bidhaa-subtitle{
+    color: var(--primarycolor);
+    font-family: EduSA;
+    font-size: 2rem;
+}
+.bidhaa-title{
+    letter-spacing: var(--letterspacing);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.bidhaa-image{
+    width: 100%;
+    border-radius: 1rem;
+}
+.bidhaa-jina{
+    text-transform: uppercase;
+    letter-spacing: var(--letterspacing);
+}
+.bidhaa-bei{
+    color: var(--primarycolor);
+}
+.bidhaa-kulia{
+    padding-top: 2rem;
+}
+.wasiliana-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wasiliana-title{
+    letter-spacing: var(--letterspacing);
+    color: var(--primarycolor);
+    font-size: 2.5rem;
+    font-family: EduSA;
+    margin-top: 1.5rem;
+}
+.wasiliana-kushoto, .wasiliana-kulia{
+    width: 100%;
+}
+
+@media screen and (min-width:576px) {
+    .wasiliana-kushoto, .wasiliana-kulia{
+        padding-right: 1rem;
+        width: 50%;
+    }
+}
+.wasiliana-text{
+    font-size: 1.5rem;
+}
+.input{
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--primarycolor);
+    padding: 0.5rem;
+}
+.input::placeholder{
+    text-transform: uppercase;
+    color: var(--primarycolor);
+    letter-spacing: var(--letterspacing);
+    font-weight: bold;
+}
+.wasiliana-section button{
+    border: none;
+}
+.footer{
+    text-align: center;
+    padding: 2rem ;
+}
+.social-icon{
+    color: slategray;
+    font-size: 1.5rem;
+    transition: var(--mainTransition);
+}
+.social-icon:hover{
+    color: var(--primarycolor);
+}
+.footer-text{
+    font-size: 1.2rem;
+    letter-spacing: calc(var(--letterspacing)/2);
+}
+.footer-text span{
+    color: var(--primarycolor);
+}
