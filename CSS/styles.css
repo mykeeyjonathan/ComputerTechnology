@@ -45,6 +45,7 @@ body{
     animation: bounce 2s infinite;
 }
 .navbar{
+    opacity: .9rem;
     display: none;
     height: 100%;
     width: 100%;
@@ -67,11 +68,10 @@ list-style-type:none;
 }
 .nav-close{
     font-size: 2.5rem;
-  
 }
 
 .header{
-   background: url(../Images/pc\ background.jpg); 
+    background: url(../Images/pc\ background.jpg);  
    height: 100vh;   
    background-position: center;
    background-size: cover; 

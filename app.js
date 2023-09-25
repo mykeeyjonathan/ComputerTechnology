@@ -1,11 +1,11 @@
 let menuBtn = document.getElementById('menu');
 let closeBtn = document.getElementById('nav-close');
-let navbar = document.getElementById('navbar');
+let Navbar = document.getElementById('Navbar');
 
-
-menuBtn.addEventListener('click',() =>{
-    navbar.classList.add('oneshaNavbar')
+menuBtn.addEventListener('click',()=>{
+    navbar.classList.add('oneshanavbar')
 })
-closeBtn.addEventListener('click',() =>{
-    navbar.classList.remove('oneshaNavbar')
+
+menuBtn.addEventListener('click',()=>{
+    Navbar.classList.remove('oneshanavbar')
 })
