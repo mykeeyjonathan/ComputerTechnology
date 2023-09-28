@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Member Computer</title>
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="stylesheet" href="./fontawesome-/css/all.css">
+
+    <!-- Adding the sarufi bot for the website -->
+    <script defer async>
+        document.addEventListener('DOMContentLoaded', function() {
+          // setting global variables
+          window.botId = 2300
+          
+          // create div with id = sarufi-chatbox
+          const div = document.createElement("div")
+          div.id = "sarufi-chatbox"
+          document.body.appendChild(div)
+      
+          // create and attach script tag
+          const script = document.createElement("script")
+          script.crossOrigin = true
+          script.type = "module"
+          script.src = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/script.js"
+          document.head.appendChild(script)
+      
+          // create and attach css
+          const style = document.createElement("link")
+          style.crossOrigin = true
+          style.rel = "stylesheet"
+          style.href = "https://cdn.jsdelivr.net/gh/flexcodelabs/sarufi-chatbox/example/vanilla-js/style.css"
+          document.head.appendChild(style)
+        });
+      </script>
 </head>
 <body>
     <span class="menu" id="menu">
@@ -29,7 +56,7 @@
     <h2 class="header-subtitle">welcome Customer</h2>
     <h1 class="header-title">member computer</h1>
     <h1 class="header-title-thin">Technology</h1>
-    <a href="#" class="btn">Wasiliana nasi</a>
+    <a href="#mawasiliano" class="btn">Wasiliana nasi</a>
  </header>
  <div class="divider"></div>
 <section class="section">
@@ -74,8 +101,8 @@
         </div>
         <div class="kuhusu-kulia">
             <h1 class="kuhusu-subtitle">kuhusu</h1>
-            <h2 class="kuhusu-title">Frank computer technology</h2>
-          <p class="kuhusu-text">Member computer Technology ni wauzaji wa vifaa bora vya technology Tanzania .</p>
+            <h2 class="kuhusu-title">Member computer technology</h2>
+          <p class="kuhusu-text">Ni wauzaji wa vifaa bora vya technology Tanzania .</p>
           <p class="kuhusu-text">Laptops kwa bei poa,adapter ,games pads,Flash ,sticker za computer karibuni.</p>
             <a class="main-btn" href="#">Soma zaidi</a>
         </div><kuhusu-text></kuhusu-text>
@@ -109,7 +136,7 @@
         </div>
     </div>
 </section>
-<section class="section">
+<section class="section" id="mawasiliano">
     <div class="center-section wasiliana-section">
        <div class="wasiliana-kushoto">
         <div>
@@ -145,8 +172,8 @@
         method="POST">
            <input class="input" type="text" name="jina" id="" placeholder="jina">
            <input class="input" type="text" name="simu namba" id="" placeholder="simu namba">
-           <textarea class="input" name="Ujumbe" id="" cols="30" rows="10" placeholder="Ujumbe"></textarea>
            <input class="input" type="text" name="Email" id="" placeholder="Email">
+           <textarea class="input" name="Ujumbe" id="" cols="30" rows="10" placeholder="Ujumbe"></textarea>
            <button class="main-btn">Tuma</button>
         </form>
        </div>
